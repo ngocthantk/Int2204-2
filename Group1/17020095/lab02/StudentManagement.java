@@ -21,7 +21,7 @@ public class StudentManagement{
 		for(String g :Group){
 			System.out.println("GROUP :" + g + "////////");
 			for(Student s:students){
-				if(s.getGroup().equals(g) && s.getId() != "000"){
+				if(s.getGroup().equals(g)){
 					System.out.println(s.getInfo());
 				}
 			}
