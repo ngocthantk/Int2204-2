@@ -24,3 +24,13 @@ curl -X PUT https://api.github.com/repos/oopuet/Int2204-2/collaborators/atmzer19
 curl -X PUT https://api.github.com/repos/oopuet/Int2204-2/collaborators/namnguyen26399?access_token=
 curl -X PUT https://api.github.com/repos/oopuet/Int2204-2/collaborators/TGLMiNa?access_token=
 curl -X PUT https://api.github.com/repos/oopuet/Int2204-2/collaborators/muinme?access_token=
+
+curl -X PUT https://api.github.com/repos/oopuet/Int2204-2/collaborators/tanh1109?access_token=
+curl -X PUT https://api.github.com/repos/oopuet/Int2204-2/collaborators/anhtam11061999?access_token=
+curl -X PUT https://api.github.com/repos/oopuet/Int2204-2/collaborators/uetdev?access_token=
+curl -X PUT https://api.github.com/repos/oopuet/Int2204-2/collaborators/haleo2410?access_token=
+curl -X PUT https://api.github.com/repos/oopuet/Int2204-2/collaborators/SadNess1706?access_token=
+curl -X PUT https://api.github.com/repos/oopuet/Int2204-2/collaborators/HuyenYoo?access_token=
+curl -X PUT https://api.github.com/repos/oopuet/Int2204-2/collaborators/lucthithao?access_token=
+curl -X PUT https://api.github.com/repos/oopuet/Int2204-2/collaborators/nguyenhuyviet?access_token=
+curl -X PUT https://api.github.com/repos/oopuet/Int2204-2/collaborators/17021065?access_token=
