@@ -30,9 +30,9 @@ public class StudentManagement{
       			break;
       		}
       	}
-	}
+}
 	
-	public static void main (String[] args){
+public static void main (String[] args){
 	StudentManagement st = new StudentManagement();
 	st.students[st.count++] = new Student("Nguyen Thu Hang","17020724","17020724@vnu.edu.vn");
 	st.students[st.count++] = new Student ("NTH","9909","nth@vnu.edu.vn");
@@ -40,11 +40,11 @@ public class StudentManagement{
 	st.students[st.count++] = new Student(st.students[0]);
 	st.students[st.count++] = new Student();
 	st.students[st.count-1].setID("099");
-    st.studentsByGroup();
-    st.removeStudent("000");
-    System.out.println("*********************AFTER REMOVING*********************");
-    st.studentsByGroup();
-	}
+   	st.studentsByGroup();
+    	st.removeStudent("000");
+    	System.out.println("*********************AFTER REMOVING*********************");
+    	st.studentsByGroup();
+}
 	
   }                             
                            
