@@ -6,7 +6,7 @@ public class Nyc {
            private int sdv1;
            private int sdv2;
            private int sdv3;
-           private final boolean isFucked = true;
+           
 		public String getName() {
 			return name;
 		}
