@@ -1,13 +1,15 @@
-public class catObj {
+package week3;
+
+public class DogObj {
 	protected String name, color, categories;
 	protected int weight;
-	public catObj() {
-		this.name = "Doraemon";
+	public DogObj() {
+		this.name = "Tom";
 		this.color = "yellow";
-		this.weight = 5;
-		this.categories = "Caloco cat";
+		this.weight = 50;
+		this.categories = "Oggy";
 	}
-	public catObj(String setName, String setColor, int setWeight, String setCategories) {
+	public DogObj(String setName, String setColor, int setWeight, String setCategories) {
 		this.name = setName;
 		this.color = setColor;
 		this.weight = setWeight;
@@ -37,9 +39,5 @@ public class catObj {
 	}
 	public void setWeight(int weight) {
 		this.weight = weight;
-	}
-	public static void main(String[] srgs) {
-		catObj catOfMe = new catObj("Tom", "three color", 8, "Caloco cat");
-		System.out.print(catOfMe.getName());
 	}
 }
