@@ -1,3 +1,5 @@
+import static java.lang.Math. *;
+
 public class PS {
     private  int tu, mau;
     public PS(int tu, int mau){
@@ -5,38 +7,22 @@ public class PS {
         this.tu = tu; this.mau = mau;
         this.ToiGian();
     }
-    public PS(PS ps1, PS ps2, int n){
-        //ham khoi tao trong truong hop thuc hien phep tinh  phan so
-        //tham so ps1, ps2 la 2 phan so, tham so n thuc hien phep tinh
-        switch(n){
-            case 0:
-                this.tu = ps1.getTu()*ps2.getMau() + ps1.getMau()*ps2.getTu();
-                this.mau = ps1.getMau()*ps2.getMau();
-                //TH n = 0 thi phep khoi tao se la phep cong 2 phan so
-                this.ToiGian();//sau khi khoi tao can phai toi gian phan so
-                break;
-            case 1:
-                this.tu = ps1.getTu()*ps2.getMau() - ps1.getMau()*ps2.getTu();
-                this.mau = ps1.getMau()*ps2.getMau();
-                //Th n = 1 thi phep khoi tao la phep tru 2 phan so
-                this.ToiGian();
-                break;
-            case 2:
-                this.tu = ps1.getTu()*ps2.getTu();
-                this.mau = ps1.getMau()*ps2.getMau();
-                //Th n = 2 thi phep khoi tao la phep nhan 2 phan so
-                this.ToiGian();
-                break;
-            case 3:
-                this.tu = ps1.getTu()*ps2.getMau();
-                this.mau = ps1.getMau()*ps2.getTu();
-                //Th n = 3 thi phep khoi tao la phep chia 2 phan so
-                this.ToiGian();
-                break;
-            default:
-                this.tu = 0; this.mau = 0;
-                break;
-        }
+    
+    public void Sum(PS other){
+        this.tu = this.tu * other.getMau() + this.mau *other.getTu();
+        this.mau = this.mau * other.getMau();
+    }
+    public void Subtract(PS other){
+        this.tu = this.tu * other.getMau() + this.mau * other.getTu();
+        this.mau = this.mau * other.getMau();
+    }
+    public void Multi(PS other){
+        this.tu =this.tu * other.getTu();
+        this.mau = this.mau * other.getMau();
+    }
+    public void Divide(PS other){
+        this.tu = this.tu * other.getMau();
+        this.mau =this.mau * other.getTu();
     }
     public int getTu(){
         return tu;
@@ -45,14 +31,16 @@ public class PS {
         return mau;
     }
     
-    public boolean equals(PS other){
-        //ham so sanh 2 phan so co bang nhau khong
-        int t1 = this.getTu();
-        int m1 = this.getMau();
-        int t2 = other.getTu();
-        int m2 = other.getMau();
-        if(t1 == t2 && m1 == m2) return true;
-        else return false;
+    public boolean equals(Object obj){
+        if(obj instanceof PS){
+            PS other = (PS) obj;
+            int t1 = this.getTu();
+            int m1 = this.getMau();
+            int t2 = other.getMau();
+            int m2 = other.getMau();
+            if(abs(t1) == abs(t2) && abs(m1) == abs(m2)) return true;
+            else return false;
+        } else return false;   
     }
     public void getInfo(){
         System.out.println("Gia tri cua phan so la : " + tu + "/" + mau);
@@ -63,9 +51,11 @@ public class PS {
         tu /= x;
         mau /= x;
     }
-    public static int UCLN(int a, int b){
+    public int UCLN(int a, int b){
         //ham de quy tim UCLN cua 2 so nguyen
         int temp ,x;
+        a = abs(a);
+        b = abs(b);
         if (a < b){
             temp = a;a = b;b = temp;  
         }
