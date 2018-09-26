@@ -1,3 +1,4 @@
+
 package com.criss.bai1;
 
 import java.util.Scanner;
