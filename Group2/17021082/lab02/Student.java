@@ -5,48 +5,43 @@ public class Student {
 	private String email;
 
 	public String getName() {
-		reurn name;
+		return name;
 	}
 	public void setName (String name) {
 		this.name = name;
 	}
 	public String getId() {
-		reurn id;
+		return id;
 	}
 	public void setId (String id) {
 		this.id = id;
 	}
 	public String getGroup() {
-		reurn group;
+		return group;
 	}
 	public void setGroup (String group) {
 		this.group = group;
 	}
 	public String getEmail() {
-		reurn email;
+		return email;
 	}
 	public void setEmail (String email) {
 		this.email = email;
 	}
 	
 	public void getInfor() {
-		system.out.println ("Name is ");
-		system.out.println (name);
-		system.out.println ("Id is ");
-		system.out.println (id);
-		system.out.println ("Group is ");
-		system.out.println (group);
-		system.out.println ("Email is ");
-		system.out.println (email);
-	}
-
+		System.out.println ("Name is " + name);
+		System.out.println ("Id is " + id);
+                System.out.println ("Group is " + group);
+                System.out.println ("Email is " + email);
+                }
 	public Student() {
 		this.name = "Student";
 		this.id = "000";
 		this.group = "INT22041";
 		this.email = "uet@vnu.edu.vn";
 	}
-	public Studen(String name, String id, String email) {
+	public Student(String name, String id, String email) {
 		this.name = name;
 		this.id = id;
 		this.group = "INT22041";

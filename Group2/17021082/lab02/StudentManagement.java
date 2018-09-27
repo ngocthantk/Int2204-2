@@ -1,20 +1,21 @@
 public class StudentManagement {
 	public static void main (String[] args) {
-		Student Student1 = new Student();
-		Student1.setName("Trinh");
-		Student1.setId("17021082");
-		Student1.setGroup("C-C");
-		Student1.setEmail("buithikieutrinh1999@gmail.com");
-		system.out.println(Student123.getName());
-		Student1.getInfo();
+            /*
+		Student my = new Student();
+		my.setName("Trinh");
+		my.setId("17021082");
+		my.setGroup("C-C");
+		my.setEmail("buithikieutrinh1999@gmail.com");
+		System.out.println(my.getName());
+		my.getInfor();
 
-
-		Student Student1 = new Student();
-		Student1.getInfo();
-		Student Student2 = new Student ("Trinh", "17021082", "buithikieutrinh1999@gmail.com");
-		Student2.getInfo();
-		Student Student3 = new Student (Student1);
-		Student3.getInfo();
+*/
+		Student my = new Student();
+		my.getInfor();
+		Student Sv2 = new Student ("Trinh", "17021082", "buithikieutrinh1999@gmail.com");
+		Sv2.getInfor();
+		Student Sv3 = new Student (my);
+		Sv3.getInfor();
 
 
 		Student sv1 = new Student ("sv1", "17021082", "INT22041", "sv1@vnu.edu.vn");
@@ -27,13 +28,13 @@ public class StudentManagement {
 	}
 	public void ktGroup(Student sv1, Student sv2) {
 		if (sameGroup(sv1, sv2))
-			system.out.println("Cung lop");
+			System.out.println("Cung lop");
 		else
-			system.out.println("Khac lop");
+			System.out.println("Khac lop");
 	}
 
 
-	public boolean sameGroup(Student Studnet1, Studnet Student2) {
+	public boolean sameGroup(Student Student1, Student Student2) {
 		return (Student1.getGroup().equals(Student2.getGroup()));
 	}
 

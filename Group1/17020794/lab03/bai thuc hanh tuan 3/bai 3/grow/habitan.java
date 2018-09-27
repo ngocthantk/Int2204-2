@@ -1,0 +1,1 @@
+ public enum habitan{ LAND, SEA ;}

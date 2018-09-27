@@ -32,30 +32,10 @@ public class PhanSo {
 		this.mauSo = mauSo;
 	}
 
-	// tìm ước chung lớn nhất nếu có để rút gọn phân số
-	public int UCLN(int a, int b) {
-		while (a != b) {
-			if (a > b) {
-				a -= b;
-			} else {
-				b -= a;
-			}
-		}
-		return a;
-	}
-
-	// rút gọn phân số, thuận tiện cho tính toán
-	public void rutGonPS() {
-		int i = UCLN(this.getTuSo(), this.getMauSo());
-		this.setTuSo(this.getTuSo() / i);
-		this.setMauSo(this.getMauSo() / i);
-	}
-
 	public void Cong(PhanSo ps) {
 		int ts = this.getTuSo() * ps.getMauSo() + ps.getTuSo() * this.getMauSo();
 		int ms = this.getMauSo() * ps.getMauSo();
 		PhanSo phansocong = new PhanSo(ts, ms);
-		phansocong.rutGonPS();
 		System.out.println("Tổng hai phân số = " + phansocong.tuSo + "/" + phansocong.mauSo);
 	}
 
@@ -63,7 +43,6 @@ public class PhanSo {
 		int ts = this.getTuSo() * ps.getMauSo() - ps.getTuSo() * this.getMauSo();
 		int ms = this.getMauSo() * ps.getMauSo();
 		PhanSo phansotru = new PhanSo(ts, ms);
-		phansotru.rutGonPS();
 		System.out.println("Hiệu hai phân số = " + phansotru.tuSo + "/" + phansotru.mauSo);
 	}
 
@@ -71,7 +50,6 @@ public class PhanSo {
 		int ts = this.getTuSo() * ps.getTuSo();
 		int ms = this.getMauSo() * ps.getMauSo();
 		PhanSo phansonhan = new PhanSo(ts, ms);
-		phansonhan.rutGonPS();
 		System.out.println("Tích hai phân số = " + phansonhan.tuSo + "/" + phansonhan.mauSo);
 	}
 
@@ -79,20 +57,20 @@ public class PhanSo {
 		int ts = this.getTuSo() * ps.getMauSo();
 		int ms = this.getMauSo() * ps.getTuSo();
 		PhanSo phansochia = new PhanSo(ts, ms);
-		phansochia.rutGonPS();
 		System.out.println("Thương hai phân số = " + phansochia.tuSo + "/" + phansochia.mauSo);
 	}
 
-	// so sánh 2 phân số
-	// tạo lớp phân số mới rồi tham chiếu tới các thuộc tính của phân số
-	public boolean equals(PhanSo ps) {
-		if (this.getTuSo() == ps.getTuSo() && this.getMauSo() == ps.getMauSo()) {
-			System.out.println("It's true");
-			return true;
-		} else {
-			System.out.println("It's false");
-			return false;
+	public boolean equals(Object obj) {
+		boolean isEqual = false;
+		if (obj instanceof PhanSo) {
+			PhanSo ps = (PhanSo) obj;
+			if (Math.abs((((double) this.tuSo) / this.mauSo) - ((double) ps.tuSo) / ps.mauSo) < 0.00000001) {
+				isEqual = true;
+			} else {
+				return false;
+			}
 		}
+		return isEqual;
 	}
 
 	public static void main(String[] args) {
@@ -108,23 +86,22 @@ public class PhanSo {
 		System.out.println("-------------------------");
 		PhanSo ps = new PhanSo(ts1, ms1);
 		PhanSo ps2 = new PhanSo(ts2, ms2);
-
-		// xác thực mẫu số của phân số hợp lệ
-		if (ms1 == 0 && ms2 == 0) {
+		if (ms1 == 0 || ms2 == 0) {
 			System.out.print("Bạn đã nhập phân số không hợp lệ");
 		} else {
 			System.out.println("Phân số nhập vào là " + ps.getTuSo() + "/" + ps.getMauSo() + " và " + ps2.getTuSo()
 					+ "/" + ps2.getMauSo());
-			ps.rutGonPS();
-			ps2.rutGonPS();
-			System.out.println("Phân số rút gọn là " + ps.getTuSo() + "/" + ps.getMauSo() + " và " + ps2.getTuSo() + "/"
-					+ ps2.getMauSo());
 			ps.Cong(ps2);
 			ps.Tru(ps2);
 			ps.Nhan(ps2);
 			ps.Chia(ps2);
 			ps.equals(ps2);
+			System.out.println("So sánh 2 phân số: ");
+			if (ps.equals(ps2) == true) {
+				System.out.print("bằng nhau");
+			} else {
+				System.out.print("không bằng");
+			}
 		}
-
 	}
 }
