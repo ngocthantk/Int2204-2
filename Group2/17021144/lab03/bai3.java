@@ -51,8 +51,46 @@ class flower{
         this.color = color;
     }
 }
-public class bai3 {
-    public static void main(String[] args){
-        System.out.println("hello");
+// lớp đôi tượng sách
+class book{
+    private String ten;
+    private String tacgia;
+    public book(){
+        ten = "lap trinh java";
+        tacgia = "Trần Thị Minh Châu";
+    }
+    public book(String ten, String tacgia){
+        this.ten = ten;
+        this.tacgia = tacgia;
+    }
+    public String getTen(){
+        return ten;
+    }
+    public void setTen(String ten){
+        this.ten = ten;
     }
 }
+// Lớp đối tượng con chó
+class dog {
+	private String name;
+	private String age;
+        
+	public void dog() {
+		name = "tin";
+		age = "7";
+        }
+
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getAge() {
+		return age;
+	}
+	public void setAge(String age) {
+		this.age = age;
+	}
+}
+
