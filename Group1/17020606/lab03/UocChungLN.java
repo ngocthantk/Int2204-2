@@ -1,17 +1,18 @@
 import java.util. *;
-
+import java.lang.Math. *;
 public class UocChungLN{
-
-    
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int x,y;
         x = sc.nextInt();
         y = sc.nextInt();
-        System.out.println("UCLN cua 2 so la: " + UCLN(x,y));
+        UocChungLN uc = new UocChungLN();
+        System.out.println("UCLN cua 2 so la: " + uc.UCLN(x,y));
     }
-    public static int UCLN(int a, int b){
+    public int UCLN(int a, int b){
         //ham de quy tim UCLN cua 2 so nguyen
+	a = abs(a);
+	b = abs(b);
         int temp ,x;
         if (a < b){
             temp = a;a = b;b = temp;

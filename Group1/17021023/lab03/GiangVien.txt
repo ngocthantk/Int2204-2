@@ -1,0 +1,41 @@
+import java.util.Scanner;
+public class GiangVien {
+
+    private String name;
+    private String tuoi;
+    private String GVMon;
+    
+    public void setName( String name) {
+            this.name = name;
+    }
+    public String getName(){
+        return name;
+    }
+    
+    public void setTuoi( String tuoi) {
+            this.tuoi = tuoi;
+    }
+    public String getTuoi(){
+        return tuoi;
+    }
+    
+    public void setGVM( String GVM) {
+            this.GVMon = GVM;
+    }
+    public String getGVM(){
+        return GVMon;
+    }
+    
+    public static void getInforGV(){
+        GiangVien A = new GiangVien();
+        A.setName("Tran Dinh Duong");
+        A.setTuoi("22");
+        A.setGVM("TH Lap trinh huong doi tuong");
+        
+        System.out.println("Ho va ten: " + A.getName());
+        System.out.println("Tuoi: " + A.getTuoi());
+        System.out.println("Giang vien mon: " + A.getGVM());
+        
+    }
+}
+
