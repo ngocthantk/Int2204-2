@@ -1,3 +1,5 @@
+package week3;
+
 public class PS extends C1 {
 	protected int tu, mau;
 	public PS() {
