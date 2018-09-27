@@ -2,7 +2,7 @@
 package ps;
 
 public class ps {
-
+   // khởi tạo 2 thuộc tính.
     public int tu;
     public int mau;
     public ps(){
@@ -25,31 +25,35 @@ public class ps {
         this.tu = tu;
         this.mau = mau;
     }
+// Hàm nhân 2 phân số.
     ps nhanPS(ps p){
-
         ps n = new ps();
         n.tu = p.tu*this.tu;
         n.mau = p.mau*this.mau;
         return n;
     }
+// Hàm chia 2 phân số
     ps chiaPS(ps p){
         ps c = new ps();
         c.tu = p.tu*this.mau;
         c.mau = p.mau*this.tu;
         return c;
     }
+// Hàm cộng 2 phân số
     ps congPS(ps p){
         ps co = new ps();
         co.tu = p.tu *this.mau + p.mau*this.tu;
         co.mau = p.mau *this.mau;
         return co;
     }
+// Hàm trừ 2 phân số
     ps truPS(ps p){
         ps t = new ps();
         t.tu = p.tu *this.mau - p.mau*this.tu;
         t.mau = p.mau*this.mau;
         return t;
     }
+// Tính ucln dùng để rút gọn 2 phân sô.
     public int UCLN(int a, int b){
         a = Math.abs(a);
         b = Math.abs(b);
@@ -64,13 +68,13 @@ public class ps {
     }
        return a;}
     }
+// Hàm rút gọn 2 phân sô.
     public void rut() {
       int u = UCLN(tu,mau);
       this.tu = getTu()/u;
-	this.mau = getMau()/u;
-	
-	}
-
+      this.mau = getMau()/u;
+    }
+// Kiểm tra 2 phân số có bằng nhau.
     public boolean equals(Object obj) {
 		if(this == obj)
 		   return true;
@@ -79,6 +83,7 @@ public class ps {
 	        return(this.tu*p.mau == this.mau*p.tu);
 		}else return false;	  
 	}
+// Hàm in ra phân số.
     public void in(){
         if(tu==0){
             System.out.println(0);
@@ -94,6 +99,7 @@ public class ps {
         System.out.println(this.tu+ "/" +this.mau);
         }
     }
+// hàm main.
     public static void main(String[] args){
         ps p1 = new ps(1,2);
         ps p2 = new ps(-1,2);
