@@ -31,11 +31,13 @@ public class Student {
         System.out.print("Nhap Ten sv: " );
         String ten = s.nextLine();
         
+        System.out.print("Nhap Khoa: " );
+        String khoa = s.nextLine();
+        
         System.out.print("Nhap MSSV: ");
         int ma = s.nextInt();
         
-        System.out.print("Nhap Khoa: " );
-        String khoa = s.nextLine();
+        
         
         this.setName(ten);
         this.setMssv(ma);
