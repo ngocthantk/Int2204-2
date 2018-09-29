@@ -1,9 +1,9 @@
 package tuan2;
 
 public class Developers {
-	private String LanDeve; // viet dc ngon ngu nao
-	private int Exp; // kinh nghiem (year)
-	private String Achieve; // thanh tuu
+	private String lanDeve; // viet dc ngon ngu nao
+	private int exp; // kinh nghiem (year)
+	private String achieve; // thanh tuu
 	private String name;
 	public String getName() {
 		return name;
@@ -14,26 +14,28 @@ public class Developers {
 	}
 
 	public String getLanDeve() {
-		return LanDeve;
+		return lanDeve;
 	}
 
 	public void setLanDeve(String lanDeve) {
-		LanDeve = lanDeve;
+		this.lanDeve = lanDeve;
 	}
 
 	public int getExp() {
-		return Exp;
+		return exp;
 	}
 
 	public void setExp(int exp) {
-		Exp = exp;
+		this.exp = exp;
 	}
 
 	public String getAchieve() {
-		return Achieve;
+		return achieve;
 	}
 
 	public void setAchieve(String achieve) {
-		Achieve = achieve;
+		this.achieve = achieve;
 	}
+
+	
 }
