@@ -18,7 +18,7 @@ public class Person{
 	}
 	public int getAge(){
 		return Age;
-    }
+        }
 	public String getName(){
 		return name;
 	}
@@ -160,5 +160,33 @@ public class Soldier extends Person{
 	public void getInfo(){
 		super.getInfo();
 		System.out.println("Army: " + army + " Years served: " + yearServed + " Badge: " + badge);
+	}
+}
+public class Animal{
+	private String name;
+	private int age;
+	public Animal(String name, int age){
+        this.name = name;
+		this.age = age;
+	}	
+}
+public class Dog{
+	private String place;
+	public Dog(String name, int age, String place){
+			super(name,age);
+			this.place = place;
+	}
+	public void Say(){
+		System.out.println("Woop !!!");
+	}
+}
+public class Cat{
+	private String place;
+	public Dog(String name, int age, String place){
+			super(name,age);
+			this.place = place;
+	}
+	public void Say(){
+		System.out.println("Meow !!!");
 	}
 }
