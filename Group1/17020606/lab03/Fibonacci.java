@@ -1,15 +1,15 @@
 import java.util. *;
-
-public class Fibonacci {
+public class fibonacci {
 
     
     public static void main(String[] args) {
         System.out.println("Moi nhap so: ");
         Scanner sc = new Scanner(System.in);
         int i = sc.nextInt();
-        System.out.println("Gia tri fibonacci la: " + Fibo(i));
+        fibonacci fb = new fibonacci();
+        System.out.println("Gia tri fibonacci la: " + fb.Fibo(i));
     }
-    public static int Fibo(int n){
+    public int Fibo(int n){
         //su dung de quy de tinh gia tri ham Fibonacci
         switch(n){
             case 0:
