@@ -1,0 +1,39 @@
+
+
+public class ConMeo {
+    private String giong;
+    private String maulong;
+    private String tiengkeu;
+    
+    public void setGiong( String giong) {
+            this.giong = giong;
+    }
+    public String getGiong(){
+        return giong;
+    }
+    
+    public void setMauLong( String mau) {
+            this.maulong = mau;
+    }
+    public String getMauLong(){
+        return maulong;
+    }
+    
+    public void setTiengKeu( String tiengkeu) {
+            this.tiengkeu = tiengkeu;
+    }
+    public String getTiengKeu(){
+        return tiengkeu;
+    }
+    
+    public static void getInforConMeo(){
+        ConMeo A = new ConMeo();
+        A.setGiong("Giong Cai");
+        A.setMauLong("Xam");
+        A.setTiengKeu("Meo Meo");
+        
+        System.out.println("Giong: " + A.getGiong());
+        System.out.println("Mau long: " + A.getMauLong());
+        System.out.println("Tieng keu: " + A.getTiengKeu());   
+    }   
+}
