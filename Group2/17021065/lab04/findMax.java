@@ -1,4 +1,4 @@
-package tuan3.findMax;
+package tuan3;
 
 public class findMax {
 	public static int max(int a, int b) {

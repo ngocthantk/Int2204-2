@@ -1,4 +1,4 @@
-package tuan3.findMin;
+package tuan3;
 
 public class findMin {
 	public static int min(int arr[], int size) {
