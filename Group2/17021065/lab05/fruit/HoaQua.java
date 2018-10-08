@@ -3,11 +3,11 @@ package tuan5.fruit;
 public class HoaQua {
 	private int quantity;
 
-	public int getNumber() {
+	public int getQuantity() {
 		return quantity;
 	}
 
-	public void setNumber(int number) {
+	public void setQuantity(int number) {
 		this.quantity = number;
 	}
 }
