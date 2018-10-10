@@ -5,11 +5,15 @@ import java.util.Scanner;
 public class Fibonaxi {
 
 	private static Scanner scanner = new Scanner(System.in);
-	
+
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Nhập n: ");
 		int n = scanner.nextInt();
+		Fibonaxi fbi = new Fibonaxi();
+		fbi.timSoThuN(n);
+	}
+	public void timSoThuN(int n) {
 		int fn = 1;
 		int f0 = 1;
 		int f1 = 1;
@@ -22,8 +26,4 @@ public class Fibonaxi {
 		}
 		System.out.println("Số thứ " + n + " là: " + fn);
 	}
-	public void timSoFibonaxiN() {
-		
-	}
-
 }
