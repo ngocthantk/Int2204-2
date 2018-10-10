@@ -8,30 +8,23 @@ class testfunction1 {
 
 	@Test
 	void test1() {
-		
-		function1 fc = new function1();
-		assertEquals(4, fc.max(3,4));
-		
+		assertEquals(4,function1.max(3,4));	
 	}
-	void test2() {
-		
-		function1 fc = new function1();
-		assertEquals(0, fc.max(0, -1));
+	@Test
+	void test2() {		
+	assertEquals(0, function1.max(0, -1));
 	}
-	void test3() {
-		
-		function1 fc = new function1();
-		assertEquals(-1, fc.max(-1, -2));
+	@Test
+	void test3() {	
+		assertEquals(-1, function1.max(-1, -2));
 	}
+	@Test
 	void test4() {
-		
-		function1 fc = new function1();
-		assertEquals(9, fc.max(9, 8));
+		assertEquals(9,function1.max(9, 8)) ;
 	}
+	@Test
 	void test5() {
-		
-		function1 fc = new function1();
-		assertEquals(10, fc.max(0, 10));
+		assertEquals(10,function1.max(0, 10) );
 	}
 	
 	
