@@ -5,24 +5,26 @@ public class Square extends Retangle {
 		
 	}
 	public Square(double side) {
-		this.setWidth(side);
-		this.setLength(side);
+		super(side, side);
 	}
 	public Square(double side, String color, Boolean filled) {
-		this.setWidth(side);
-		this.setLength(side);
-		this.setColor(color);
-		this.setFilled(filled); 
+		super(side, side , color, filled);
 	}
 	public double getSide() {
-		return this.getWidth();
+		return this.width;
 	}
 	public void setSide(double side) {
-		this.setWidth(side);
-		this.setLength(side);
+		super.width = side;
+		super.length = side;
+	}
+	public void setWidth(double side) {
+		this.setSide(side);
+	}
+	public void setLength(double side) {
+		this.getSide();
 	}
 	@Override
 	public String toString() {
-		return this.getColor() + ", " + this.getFilled() + ", " + this.getWidth();
+		return "Square";
 	}
 }

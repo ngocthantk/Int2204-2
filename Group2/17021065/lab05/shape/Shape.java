@@ -1,7 +1,7 @@
 package tuan5.shape;
 public class Shape {
-	private String color = "red";
-	private Boolean filled = true;
+	public String color = "red";
+	public Boolean filled = true;
 	public Shape() {
 		
 	}
@@ -23,7 +23,7 @@ public class Shape {
 	}
 	@Override
 	public String toString() {
-		return this.color + ", " + this.filled;
+		return "Shape";
 	}
 	
 }

@@ -1,8 +1,8 @@
 package tuan5.shape;
 
 public class Circle extends Shape {
-	private double radius;
-	private final double PI = Math.PI;
+	public double radius;
+	public final double PI = Math.PI;
 	public Circle() {
 		
 	}
@@ -10,9 +10,8 @@ public class Circle extends Shape {
 		this.radius = radius;
 	}
 	public Circle(double radius, String color, Boolean filled) {
+		super(color, filled);
 		this.radius = radius;
-		this.setColor(color);
-		this.setFilled(filled); 
 	}
 	public double getRadius() {
 		return radius;
@@ -28,6 +27,6 @@ public class Circle extends Shape {
 	}
 	@Override
 	public String toString() {
-		return this.getColor() + ", " + this.getFilled() + ", " + this.radius;
+		return "Circle";
 	}
 }

@@ -1,8 +1,8 @@
 package tuan5.shape;
 
 public class Retangle extends Shape {
-	private double width = 1.0;
-	private double length = 1.0;
+	public double width = 1.0;
+	public double length = 1.0;
 	public Retangle() {
 		
 	}
@@ -11,10 +11,9 @@ public class Retangle extends Shape {
 		this.length = length;
 	}
 	public Retangle(double width, double length, String color, Boolean filled) {
+		super(color, filled);
 		this.width = width;
 		this.length = length;
-		this.setColor(color);
-		this.setFilled(filled); 
 	}
 	public double getWidth() {
 		return width;
@@ -36,6 +35,6 @@ public class Retangle extends Shape {
 	}
 	@Override
 	public String toString() {
-		return this.getColor() + ", " + this.getFilled() + ", " + this.width  + ", " + this.length;
+		return "Retangle";
 	}
 }
