@@ -56,5 +56,8 @@ public class Rectangle extends Shape {
 		top4.Move(a, b);
 		
 	}
+	public String toString(){
+		return "Rectangle";
+	}
 
 }
