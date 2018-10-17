@@ -38,7 +38,9 @@ public class Circle extends Shape {
 		heart.Move(a, b);
 	}
 
-	 
+	 public String toString(){
+		return "Cicle";
+	}
 	
 
 }
