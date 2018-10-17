@@ -49,4 +49,7 @@ public abstract class Shape {
 	{
 		return true;
 	}
+	public String toString(){
+		return "Shape";
+	}
 }
