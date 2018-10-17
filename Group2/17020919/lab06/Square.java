@@ -28,4 +28,8 @@ public class Square extends Rectangle {
     	  top4.Move(a, b);
     	  
       }
+	public String toString()
+	{
+		return "Square";
+	}
 }
