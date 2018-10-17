@@ -2,11 +2,11 @@ package javaapplication17;
 
 import java.util.ArrayList;
 
-//lop so do
+
 public class Diagram {
 
     ArrayList<Layer> sodo = new ArrayList<Layer>();
-//mang dong de loai bo doi tuong hinh tron
+
 
     public int deleteCircle() {
         for (int i = 0; i < sodo.size(); i++) {

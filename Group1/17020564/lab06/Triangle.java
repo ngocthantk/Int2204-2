@@ -1,5 +1,5 @@
 package javaapplication17;
-//lop tam gia ke thua lop hinh
+
 
 import java.util.ArrayList;
 

@@ -1,5 +1,5 @@
 package javaapplication17;
-//lop chu nhat ke thua lop hinh
+
 public class Rectangle extends Shape{
     protected int chieudai,chieurong;
     protected String color;

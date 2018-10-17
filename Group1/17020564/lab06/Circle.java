@@ -1,5 +1,5 @@
 package javaapplication17;
-//lop hinh tron ke thua tu lop hinh 
+
 class Circle extends Shape{
     protected String color;
     protected double bankinh;
