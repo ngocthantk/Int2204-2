@@ -37,5 +37,8 @@ public class Triangle extends Shape {
 		}
 		return false;
 	}
+	public void toString(){
+		return "Triangle";
+	}
 	
 }
