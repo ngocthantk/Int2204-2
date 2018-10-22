@@ -7,10 +7,7 @@ package diagram;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author Nguyen Ba Duc
- */
+\
 public class Diagram {
     private ArrayList<Layer> layer;
     
