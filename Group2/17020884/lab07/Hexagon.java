@@ -6,11 +6,13 @@ public class Hexagon extends Shape{
 
 	protected Point 
 		point1= new Point(0,0),
-		point2 = new Point(0,1),
-		point3= new Point(1,0),
-		point4= new Point(1,1),
-		point5= new Point(2,1),
-		point6= new Point(1,0);
+		point2 = new Point(0,0),
+		point3= new Point(0,0),
+		point4= new Point(0,0),
+		point5= new Point(0,0),
+		point6= new Point(0,0);
+	protected double side=0;
+	
 	
 	public Hexagon() {
 		super();
@@ -21,34 +23,40 @@ public class Hexagon extends Shape{
 		point1.setPos(posX, posY);
 	}
 	
-	public Hexagon(Point point1, Point point2, Point point3, Point point4, Point point5, Point point6) {
+	public Hexagon(Point point1, double side) {
 		super();
+		int x = point1.getPosX();
+		int y = point1.getPosY();
 		this.point1= point1;
-		this.point2= point2;
-		this.point3= point3;
-		this.point4= point4;
-		this.point5= point5;
-		this.point6= point6;
+		this.point2= new Point (x+(int)side,y+(int)(0.5*side));
+		this.point3= new Point (x+(int)side,y+(int)(1.5*side));
+		this.point4= new Point (x,y+(int)(side*2));
+		this.point5= new Point (x-(int)side,y+(int)(side*1.5));
+		this.point6= new Point (x-(int)side,y+(int)(side*0.5));
 	}
 	
-	public Hexagon(int posX, int posY, Color color, boolean isFilled,
-			Point point2, Point point3, Point point4, Point point5, Point point6) {
+	public Hexagon(int posX, int posY, Color color, boolean isFilled, double side) {
 		super(posX, posY, color, isFilled);
 		point1.setPos(posX, posY);
-		this.point2= point2;
-		this.point3= point3;
-		this.point4= point4;
-		this.point5= point5;
-		this.point6= point6;
+		int x = point1.getPosX();
+		int y = point1.getPosY();
+		this.point1= point1;
+		this.point2= new Point (x+(int)side,y+(int)(0.5*side));
+		this.point3= new Point (x+(int)side,y+(int)(1.5*side));
+		this.point4= new Point (x,y+(int)(side*2));
+		this.point5= new Point (x-(int)side,y+(int)(side*1.5));
+		this.point6= new Point (x-(int)side,y+(int)(side*0.5));
 	}
 	
-	public void resize(Point point1, Point point2, Point point3, Point point4, Point point5, Point point6) {
+	public void resize(double side) {
+		int x = point1.getPosX();
+		int y = point1.getPosY();
 		this.point1= point1;
-		this.point2= point2;
-		this.point3= point3;
-		this.point4= point4;
-		this.point5= point5;
-		this.point6= point6;
+		this.point2= new Point (x+(int)side,y+(int)(0.5*side));
+		this.point3= new Point (x+(int)side,y+(int)(1.5*side));
+		this.point4= new Point (x,y+(int)(side*2));
+		this.point5= new Point (x-(int)side,y+(int)(side*1.5));
+		this.point6= new Point (x-(int)side,y+(int)(side*0.5));
 	}
 	@Override
 	public void getInfo() {
@@ -68,6 +76,11 @@ public class Hexagon extends Shape{
 	@Override
 	public void setPos(int x, int y) {
 		this.point1.setPos(x, y);
+		this.point2= new Point ((int)(x+side),(int)(y+0.5*side));
+		this.point3= new Point ((int)(x+side),(int)(y+1.5*side));
+		this.point4= new Point ((int)(x),(int)(y+side*2));
+		this.point5= new Point ((int)(x-side),(int)(y+side*1.5));
+		this.point6= new Point ((int)(x-side),(int)(y+side*0.5));
 	}
 
 	@Override
