@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="859.0" prefWidth="1433.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lab06.Controller">
+   <children>
+      <MenuBar prefHeight="32.0" prefWidth="1433.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#creatNewLayer" text="New Layer" />
+                  <MenuItem mnemonicParsing="false" onAction="#closeTab" text="Close Tab" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane layoutY="32.0" prefHeight="684.0" prefWidth="252.0" style="-fx-background-color: ghostwhite;">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="29.0" prefHeight="232.0" prefWidth="200.0" style="-fx-border-color: gray; -fx-border-radius: 5px;">
+               <children>
+                  <Button layoutX="34.0" layoutY="24.0" mnemonicParsing="false" onAction="#startAddCircle" prefHeight="31.0" prefWidth="94.0" text="Circle" />
+                  <Button layoutX="35.0" layoutY="63.0" mnemonicParsing="false" onAction="#startAddRectangle" prefHeight="31.0" prefWidth="94.0" text="Rectangle" />
+                  <Button layoutX="35.0" layoutY="101.0" mnemonicParsing="false" onAction="#startAddTriangle" prefHeight="31.0" prefWidth="94.0" text="Triangle" />
+                  <Button layoutX="34.0" layoutY="140.0" mnemonicParsing="false" onAction="#startAddSquare" prefHeight="31.0" prefWidth="94.0" text="Square" />
+                  <Button layoutX="34.0" layoutY="181.0" mnemonicParsing="false" onAction="#startAddHexagon" prefHeight="31.0" prefWidth="94.0" text="Hexagon" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="24.0" layoutY="13.0" prefHeight="32.0" prefWidth="106.0" style="-fx-background-color: ghostwhite; -fx-alignment: center;" text="Draw shape">
+               <font>
+                  <Font name="HelveticaNeue-Bold" size="16.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="14.0" layoutY="284.0" prefHeight="91.0" prefWidth="200.0" style="-fx-border-color: gray; -fx-border-radius: 5px;">
+               <children>
+                  <CheckBox fx:id="True" layoutX="42.0" layoutY="25.0" mnemonicParsing="false" onAction="#setVisibleTrue" selected="true" text="True" />
+                  <CheckBox fx:id="False" layoutX="41.0" layoutY="56.0" mnemonicParsing="false" onAction="#setVisibleFalse" text="False" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="24.0" layoutY="268.0" prefHeight="32.0" prefWidth="131.0" style="-fx-background-color: ghostwhite; -fx-alignment: center;" text="Set visible Layer">
+               <font>
+                  <Font name="HelveticaNeue-Bold" size="16.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="14.0" layoutY="408.0" prefHeight="195.0" prefWidth="200.0" style="-fx-border-color: gray; -fx-border-radius: 5px;">
+               <children>
+                  <Button layoutX="4.0" layoutY="23.0" mnemonicParsing="false" onAction="#deleteTriangle" prefHeight="31.0" prefWidth="191.0" text="Delete Triangle in Layer" />
+                  <Button layoutX="4.0" layoutY="63.0" mnemonicParsing="false" onAction="#deleteAllCircle" prefHeight="31.0" prefWidth="191.0" text="Delete Circle in Diagram" />
+                  <Button layoutX="4.0" layoutY="103.0" mnemonicParsing="false" onAction="#deleteDuplicate" prefHeight="31.0" prefWidth="191.0" text="Delete Duplicate Shape" />
+                  <Button layoutX="4.0" layoutY="141.0" mnemonicParsing="false" onAction="#sortShape" prefHeight="31.0" prefWidth="191.0" text="Sort Shape" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="24.0" layoutY="392.0" prefHeight="32.0" prefWidth="47.0" style="-fx-background-color: ghostwhite; -fx-alignment: center;" text="Filter">
+               <font>
+                  <Font name="HelveticaNeue-Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TabPane fx:id="tabPane" layoutX="252.0" layoutY="32.0" prefHeight="650.0" prefWidth="984.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Layer 1">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="597.0" prefWidth="786.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <AnchorPane layoutY="683.0" prefHeight="183.0" prefWidth="1234.0" style="-fx-border-color: gray; -fx-background-color: ghostwhite; -fx-border-radius: 5px;">
+         <children>
+            <Label layoutX="309.0" layoutY="11.0" prefHeight="21.0" prefWidth="34.0" text="X1:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="309.0" layoutY="81.0" text="Y1:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="drawBtn" layoutX="843.0" layoutY="66.0" mnemonicParsing="false" onAction="#handleDrawBtn" prefHeight="31.0" prefWidth="69.0" text="Draw" />
+            <TextField fx:id="y3" disable="true" layoutX="514.0" layoutY="107.0" prefHeight="31.0" prefWidth="77.0" />
+            <TextField disable="true" layoutX="514.0" layoutY="39.0" prefHeight="31.0" prefWidth="77.0" fx:id="x3" />
+            <Label layoutX="411.0" layoutY="11.0" prefHeight="21.0" prefWidth="34.0" text="X2:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="y2" disable="true" layoutX="407.0" layoutY="107.0" prefHeight="31.0" prefWidth="77.0" />
+            <Label layoutX="411.0" layoutY="81.0" text="Y2:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="y1" disable="true" layoutX="304.0" layoutY="107.0" prefHeight="31.0" prefWidth="77.0" />
+            <Label layoutX="513.0" layoutY="11.0" prefHeight="21.0" prefWidth="34.0" text="X3:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField disable="true" layoutX="304.0" layoutY="39.0" prefHeight="31.0" prefWidth="77.0" fx:id="x1" />
+            <TextField disable="true" layoutX="407.0" layoutY="39.0" prefHeight="31.0" prefWidth="77.0" fx:id="x2" />
+            <Label layoutX="513.0" layoutY="81.0" text="Y3:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="617.0" layoutY="11.0" prefHeight="21.0" prefWidth="58.0" text="Width:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="617.0" layoutY="81.0" prefHeight="21.0" prefWidth="61.0" text="Length:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="width" disable="true" layoutX="617.0" layoutY="39.0" prefHeight="31.0" prefWidth="77.0" />
+            <TextField fx:id="length" disable="true" layoutX="617.0" layoutY="107.0" prefHeight="31.0" prefWidth="77.0" />
+            <Label layoutX="721.0" layoutY="11.0" prefHeight="21.0" prefWidth="58.0" text="Radius:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="720.0" layoutY="81.0" prefHeight="21.0" prefWidth="61.0" text="Side:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="radius" disable="true" layoutX="720.0" layoutY="39.0" prefHeight="31.0" prefWidth="77.0" />
+            <TextField fx:id="side" disable="true" layoutX="720.0" layoutY="107.0" prefHeight="31.0" prefWidth="77.0" />
+            <Button fx:id="changeBtn" layoutX="845.0" layoutY="66.0" mnemonicParsing="false" onAction="#handleChangeBtn" text="Change" visible="false" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1234.0" layoutY="31.0" prefHeight="836.0" prefWidth="200.0" style="-fx-background-color: ghostwhite;">
+         <children>
+            <ListView fx:id="listView" layoutY="76.0" onMouseClicked="#listOnClick" prefHeight="759.0" prefWidth="200.0" style="-fx-border-color: white; -fx-background-color: ghostwhite;">
+            	<placeholder>
+						<Label text="Nothing found" textFill="#727272">
+							<font>
+								<Font name="HelveticaNeue" size="24.0" />
+							</font>
+						</Label>
+					</placeholder>
+            </ListView>
+            <Label layoutX="14.0" layoutY="37.0" prefHeight="31.0" prefWidth="173.0" text="List shape in layer: ">
+               <font>
+                  <Font name="HelveticaNeue-Bold" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
