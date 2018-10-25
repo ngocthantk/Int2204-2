@@ -20,19 +20,11 @@ public class GraphAppRun {
 			layer.addShape(new Triangle(p1,p2,p3));
 			layer.addShape(new Hexagon(
 					new Point(100,100),
-					new Point(0,200),
-					new Point(100,300),
-					new Point(200,300),
-					new Point(300,200),
-					new Point(200,100)
+					50
 					));
 			layernull.addShape(new Hexagon(
-					new Point(10,10),
-					new Point(0,20),
-					new Point(10,30),
-					new Point(20,30),
-					new Point(30,20),
-					new Point(20,10)
+					new Point(100,100),
+					200
 					));
 			layernull.getShape(0).reColor(Color.RED);
 			layervisible.addShape(new Circle(100));
